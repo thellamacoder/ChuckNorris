@@ -3,6 +3,6 @@ log the joke to a text file.
 
 # Dependencies
 
-os
-requests
-easygui
+- os
+- requests
+- easygui
