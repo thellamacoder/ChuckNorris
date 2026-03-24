@@ -1,3 +1,6 @@
+# get_chuck_joke.py is a script to call the chucknorris.io api (https://api.chucknorris.io/) and append it to a text file with all the other jokes returned.
+# By Scott Klein 24 March 2026
+
 import os
 import requests
 
