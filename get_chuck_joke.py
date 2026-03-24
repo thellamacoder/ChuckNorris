@@ -4,6 +4,13 @@
 import os
 import requests
 
+if os.path.exists("chuck_jokes.txt"):
+    pass
+
+else:
+    print("No existing Chuck jokes!")
+    open("chuck_jokes.txt", "a")
+
 response = requests.get("https://api.chucknorris.io/jokes/random")
 data = response.json()
 joke = data["value"]
