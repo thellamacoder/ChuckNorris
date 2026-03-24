@@ -5,7 +5,7 @@ import os
 import requests
 
 if os.path.exists("chuck_jokes.txt"):
-    pass
+    library = open("chuck_jokes.txt", "a")
 
 else:
     print("No existing Chuck jokes!")
@@ -16,5 +16,5 @@ data = response.json()
 joke = data["value"]
 print(joke)
 
-library = open("chuck_jokes.txt", "a")
 library.write(f"{joke} \n")
+library.close()
