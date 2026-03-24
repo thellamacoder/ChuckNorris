@@ -4,17 +4,17 @@
 import os
 import requests
 
-if os.path.exists("chuck_jokes.txt"):
-    library = open("chuck_jokes.txt", "a")
+# opens or creates file and opens it in append mode
 
-else:
-    print("No existing Chuck jokes!")
-    open("chuck_jokes.txt", "a")
+library = open("chuck_jokes.txt", "a")
+
+# calls chucknorris.io api and parses it
 
 response = requests.get("https://api.chucknorris.io/jokes/random")
 data = response.json()
 joke = data["value"]
 print(joke)
+
 
 library.write(f"{joke} \n")
 library.close()
