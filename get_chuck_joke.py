@@ -3,6 +3,7 @@
 
 import os
 import requests
+from easygui import *
 
 # opens or creates file and opens it in append mode
 
@@ -13,8 +14,8 @@ library = open("chuck_jokes.txt", "a")
 response = requests.get("https://api.chucknorris.io/jokes/random")
 data = response.json()
 joke = data["value"]
-print(joke)
 
+display = msgbox(joke, "Real Chuck Norris Facts", "lol?")
 
 library.write(f"{joke} \n")
 library.close()
